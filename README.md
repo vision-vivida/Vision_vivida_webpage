@@ -15,7 +15,7 @@ This repository hosts the source code for our website, where users can:
 
 ## 👨‍💻 Developer
 
-This website is developed and maintained by Soumyadeep Paul.
+This website is developed and maintained by **Soumyadeep Paul**.
 
 ## 🤝 Contributing
 
@@ -34,7 +34,8 @@ This website is developed and maintained by Soumyadeep Paul.
 
 ## 📜 License
 
-This project is licensed under the MIT License – see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
 <hr />
 
 ### Visit https://vision-vivida.github.io/Vision_vivida_webpage/ to view.
