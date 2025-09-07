@@ -1,0 +1,16 @@
+.simple-header{display:flex;align-items:center;gap:.7rem;padding:1rem 0}
+.order-container{display:grid;grid-template-columns:1fr 1.2fr;gap:1.2rem;margin:1rem auto}
+.order-summary-card,.order-form-card{background:#0f1117;border:1px solid #1c1f2b;border-radius:14px;padding:1rem}
+.selected-product{display:flex;gap:.8rem;align-items:center}
+.selected-product img{width:88px;height:88px;object-fit:cover;border-radius:10px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.radio{display:inline-flex;align-items:center;gap:.4rem;margin-right:1rem}
+
+.upi-qr{margin-top:1rem;padding:1rem;border:1px dashed #2c3146;border-radius:12px;background:#0b0e15}
+.upi-qr #upiQR{display:grid;place-items:center;padding:.6rem}
+.upi-qr canvas, .upi-qr img{border-radius:10px;background:#fff;padding:8px}
+
+@media (max-width: 900px){
+  .order-container{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+} 

@@ -1,0 +1,44 @@
+body.loading {
+  overflow: hidden;
+}
+
+.loading-page {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: linear-gradient(to right, #060606, #302e2e, #797474);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.4s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.loading-page.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-page path {
+  height: 400px;
+  width: 400px;
+  stroke: #eae2e2;
+  fill-opacity: 0;
+  stroke-width: 4px;
+  stroke-dasharray: 4500;
+  animation: draw 3s linear forwards;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 4500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

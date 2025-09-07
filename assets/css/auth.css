@@ -1,0 +1,7 @@
+.auth-container{min-height:100vh;display:grid;place-items:center}
+.card{width:min(480px, 92vw);background:#0f1117;border:1px solid #1c1f2b;border-radius:14px;padding:1rem}
+.tabs{display:flex;gap:.5rem;margin-bottom:.6rem}
+.tab{flex:1;background:#121522;border:1px solid #23283a;color:#cfd6f1;padding:.6rem;border-radius:10px;cursor:pointer}
+.tab.active{background:linear-gradient(135deg, var(--brand), var(--brand-600)); border-color:transparent; color:#fff}
+.panel{display:none}
+.panel.active{display:block} 

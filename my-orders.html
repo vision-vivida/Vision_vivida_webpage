@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vivida - My Orders</title>
+    <link rel="icon" href="./vivida.png" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/order.css" />
+    <link rel="stylesheet" href="assets/css/loading.css" />
+  </head>
+  <body>
+    <header class="simple-header container">
+      <a href="./" class="brand">
+        <img src="./vivida.png" alt="Vivida" class="logo" />
+        <span class="brand-name">Vivida</span>
+      </a>
+    </header>
+
+    <main class="container" style="margin:1rem auto 2rem auto;">
+      <h2>My Orders</h2>
+      <div id="ordersList" style="display:grid;gap:.8rem"></div>
+      <p id="ordersNote" class="form-note"></p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© <span id="copyrightYear"></span> Vivida. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-page" style="display:none">
+      <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="500.000000pt" height="500.000000pt" viewBox="0 0 500.000000 500.000000" preserveAspectRatio="xMidYMid meet">
+        <g transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+          <path d="M3128 3830 c-190 -47 -339 -172 -451 -380 -27 -49 -249 -567 -307-715 -7 -17 -11 -13 -29 28 -36 82 -25 137 26 137 13 0 23 5 23 10 0 6 -63 10-170 10 -107 0 -170 -4 -170 -10 0 -5 12 -10 26 -10 15 0 41 -9 60 -20 33 -21 47 -45 108 -185 l35 -80 76 0 76 0 193 421 c124 272 212 451 248 505 109 163 221 244 388 276 44 9 80 20 80 25 0 15 -133 7 -212 -12z"/>
+          <path d="M1270 3320 c0 -5 11 -10 25 -10 34 0 94 -26 123 -53 31 -29 56 -79 192 -389 l113 -258 77 0 78 0 -119 298 c-65 163 -119 305 -119 315 0 45 39 86 83 87 15 0 27 5 27 10 0 6 -87 10-240 10 -153 0 -240 -4 -240 -10z"/>
+          <path d="M3358 3271 c-112 -36 -203 -113 -277 -235 -18 -31 -68 -139 -111-241 l-79 -186 46 3 46 3 89 193 c48 106 104 218 124 250 76 120 166 187 287 212 31 6 57 13 57 16 0 12 -132 1 -182 -15z"/>
+          <path d="M2093 2554 c-36 -39 -38 -46 -23 -75 15 -27 56 -24 75 5 13 19 14 29 5 45 -6 12 -15 21 -21 21 -6 0 -8 9 -4 20 9 27 5 25 -32 -16z m41 -29 c8 -23 -4 -45 -25 -45 -25 0 -35 26 -19 45 16 19 36 19 44 0z"/>
+          <path d="M2800 2566 c-12 -34 -13 -106 -1 -106 8 0 21 119 14 129 -1 2 -7 -8-13 -23z"/>
+          <path d="M1270 2549 c0 -21 23 -104 31 -113 13 -15 11 9 -7 70 -14 51 -24 68-24 43z"/>
+          <path d="M1420 2549 c0 -28 24 -89 35 -89 14 0 51 88 41 97 -3 3 -14 -14 -24-38 l-19 -44 -7 37 c-6 35 -26 63 -26 37z"/>
+          <path d="M1610 2511 c0 -28 5 -51 10 -51 6 0 10 20 10 44 0 25 -4 48 -10 51-6 4 -10 -13 -10 -44z"/>
+          <path d="M1763 2553 c-23 -9 -14 -43 14 -54 20 -7 23 -13 15 -21 -9 -9 -15 -9-24 0 -18 18 -33 15 -18 -3 18 -22 54 -15 58 11 2 15 -3 23 -17 27 -12 3 -21 10 -21 17 0 7 8 9 20 5 24 -7 27 10 4 19 -9 3 -16 6 -17 5 -1 0 -8 -3 -14 -6z"/>
+          <path d="M1930 2511 c0 -28 5 -51 10 -51 6 0 10 20 10 44 0 25 -4 48 -10 51-6 4 -10 -13 -10 -44z"/>
+          <path d="M2337 2553 c-4 -3 -7 -18 -7 -32 l-1 -26 -17 28 c-25 41 -42 34 -42-18 0 -25 5 -45 10 -45 6 0 10 15 10 33 l0 32 21 -32 c12 -18 25 -33 30 -33 5 0 9 23 9 50 0 51 -1 55 -13 43z"/>
+          <path d="M2600 2557 c0 -5 5 -28 11 -53 18 -69 43 -56 65 33 5 17 3 24 -4 19-6 -3 -13 -20 -17 -36 -7 -33 -25 -41 -25 -12 0 18 -29 65 -30 49z"/>
+          <path d="M2926 2533 c20 -84 44 -96 62 -34 18 57 13 72 -7 26 l-18 -40 -16 38c-19 43 -30 49 -21 10z"/>
+          <path d="M3120 2511 c0 -28 5 -51 10 -51 6 0 10 20 10 44 0 25 -4 48 -10 51-6 4 -10 -13 -10 -44z"/>
+          <path d="M3257 2554 c-4 -4 -7 -27 -7 -51 0 -41 1 -43 29 -43 49 0 81 51 48 78 -17 15 -61 25 -70 16z m51 -23 c21 -13 10 -46 -16 -49 -19 -3 -22 1 -22 27 0 31 13 39 38 22z"/>
+          <path d="M3469 2516 c-11 -26 -17 -51 -13 -54 3 -4 9 -1 11 6 5 14 53 17 53 2 0 -5 4 -10 10 -10 10 0 -16 77 -31 94 -5 6 -18 -11 -30 -38z m31 -1 c0 -8 -4-15 -10 -15 -5 0 -7 7 -4 15 4 8 8 15 10 15 2 0 4 -7 4 -15z"/>
+          <path d="M1827 2373 c33 -87 241 -547 249 -550 5 -2 15 18 22 44 7 26 62 155 122 285 l108 238 -51 0 -52 0 -65 -155 c-35 -85 -67 -152 -71 -147 -3 4 -32 73 -64 155 l-59 147 -72 0 c-66 0 -73 -2 -67 -17z"/>
+          <path d="M2381 2382 c25 -65 244 -552 248 -552 4 0 15 24 25 52 10 29 65 154 121 278 l103 225 -35 3 c-20 2 -39 0 -43 -5 -4 -4 -40 -88 -81 -185 -40 -98 -76 -175 -80 -170 -4 4 -39 86 -77 182 l-70 175 -57 3 c-32 2 -55 -1 -54 -6z"/>
+        </g>
+      </svg>
+    </div>
+
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/loading.js"></script>
+    <script>
+      document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+      const user = window.VividaAuth.getCurrentUser();
+      if(!user){ location.href = 'auth.html?redirect=my-orders.html'; }
+      const orders = window.VividaStorage.getOrders().filter(o => (o.customer?.email || o.userEmail) === user.email);
+      const host = document.getElementById('ordersList');
+      const note = document.getElementById('ordersNote');
+      if(orders.length === 0){ note.textContent = 'No orders yet.'; }
+      const fmt = (d)=> new Date(d).toLocaleDateString();
+      const fmtInr = (v)=> `₹${Number(v).toFixed(0)}`;
+      orders.forEach(o => {
+        const el = document.createElement('article');
+        el.className = 'order-summary-card';
+        const eta = o.expectedDeliveryAt ? fmt(o.expectedDeliveryAt) : '—';
+        el.innerHTML = `
+          <div style="display:flex;align-items:center;gap:.8rem;">
+            <img src="${o.item?.src}" alt="${o.item?.name}" style="width:64px;height:64px;object-fit:cover;border-radius:8px"/>
+            <div>
+              <strong>#${o.orderId}</strong> • ${fmt(o.createdAt)} • ${o.item?.name}
+              <div class="form-note">${o.size} • Qty ${o.quantity} • ${fmtInr(o.totalINR)} • Status: ${o.status}
+                <br/>Expected delivery: ${eta}
+              </div>
+            </div>
+          </div>
+        `;
+        host.appendChild(el);
+      });
+    </script>
+  </body>
+</html> 
